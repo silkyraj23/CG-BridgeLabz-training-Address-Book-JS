@@ -61,3 +61,14 @@ function editAddress(name, newDetails) {
         throw new Error("Contact not found");
     }
 }
+// Function to delete an address from the address book
+function deleteAddress(name) { 
+    let index = addressBook.findIndex(address => address.firstName === name);
+    
+    if (index !== -1) {
+        addressBook.splice(index, 1);
+        return "Address deleted successfully";
+    } else {
+        return "Address not found";
+    }
+}
