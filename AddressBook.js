@@ -8,9 +8,10 @@ class Address {
         this.zip = zip;
         this.phone = phone;
         this.email = email;
+        //validate fields
         this.validate();
     }
-    validate() { 
+    validate() {
         //regex 
         const nameRegex = /^[A-Z][a-zA-Z]{2,}$/;
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -39,4 +40,9 @@ class Address {
             throw new Error("Invalid ZIP code");
         }
     }
+}
+let addressBook = []  
+//function to store addressbook to array
+function addAddress(address){
+    addressBook.push(address);
 }
