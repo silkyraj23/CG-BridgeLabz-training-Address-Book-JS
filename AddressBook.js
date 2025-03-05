@@ -110,3 +110,8 @@ function viewByCityOrState(city, state) {
 function countByCityOrState(city, state) { 
     return searchByCityOrState(city, state).length;
 }
+
+//Function to Sort the entries alphabetically by name
+function sortByName() {
+    return [...addressBook].sort((a, b) => a.firstName.localeCompare(b.firstName));
+}
