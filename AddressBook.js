@@ -105,3 +105,8 @@ function viewByCityOrState(city, state) {
     console.log(viewAddress); 
     return viewAddress; 
 }
+
+//Function to get number of contact persons i.e. count by City or State
+function countByCityOrState(city, state) { 
+    return searchByCityOrState(city, state).length;
+}
