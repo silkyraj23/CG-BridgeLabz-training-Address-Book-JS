@@ -1,3 +1,4 @@
+
 class Address {
     constructor(firstName, lastName, address, city, state, zip, phone, email) {
         this.firstName = firstName;
@@ -46,8 +47,17 @@ class Address {
 let addressBook = []; 
 
 // Function to store contact in the address book array
-function addAddress(address) {
+function addAddress(address){
+    // Function to ensure there is no Duplicate Entry
+    let duplicateEntries = addressBook.filter(existingAddress => existingAddress.firstName === address.firstName);
+    
+    if (duplicateEntries.length > 0) {
+        console.log(address.firstName, "already exists");
+        return;
+    }
+    
     addressBook.push(address);
+    console.log(address.firstName, "added successfully");
 }
 
 // Function to find and edit contact
