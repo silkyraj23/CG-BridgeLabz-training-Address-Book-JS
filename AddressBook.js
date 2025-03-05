@@ -115,3 +115,13 @@ function countByCityOrState(city, state) {
 function sortByName() {
     return [...addressBook].sort((a, b) => a.firstName.localeCompare(b.firstName));
 }
+
+//Function to Sort entries by city, state, or zip
+function sortByCityStateZip(criteria) {
+    return [...addressBook].sort((a, b) => {
+        if (criteria === "zip") {
+            return a.zip - b.zip;  
+        }
+        return a[criteria].localeCompare(b[criteria]); 
+    });
+}
