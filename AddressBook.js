@@ -8,7 +8,6 @@ class Address {
         this.zip = zip;
         this.phone = phone;
         this.email = email;
-        //validate fields
         this.validate();
     }
     validate() { 
