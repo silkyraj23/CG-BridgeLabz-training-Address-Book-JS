@@ -94,3 +94,14 @@ function searchByCityOrState(city, state) {
         (!state || address.state.toLowerCase() === state.toLowerCase())
     );
 }
+
+//Function to view Persons by City or State
+function viewByCityOrState(city, state) { 
+    let viewAddress = addressBook.filter(address => 
+        (!city || address.city.toLowerCase() === city.toLowerCase()) || 
+        (!state || address.state.toLowerCase() === state.toLowerCase())
+    );
+
+    console.log(viewAddress); 
+    return viewAddress; 
+}
